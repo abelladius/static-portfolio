@@ -1,4 +1,4 @@
-// Smooth scrolling for nav
+// Smooth scrolling (not working)
 
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -7,10 +7,9 @@ document.querySelectorAll('nav a').forEach(anchor => {
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
-        window.scroll({
-            top: targetElement.offsetTop - 50,
-            behavior: 'smooth'
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start', 
         });
     });
 });
-

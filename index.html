@@ -19,31 +19,32 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
+    <!-- FontAwesome script -->
+    <script src="https://example.com/fontawesome/v5.15.4/js/all.js" data-auto-a11y="true" ></script>
+
 
 
 </head>
 <body>
     <header>
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="index.html" class="subtitle accent">Damian S.</a>
-            </div>
+        
+      <nav>
+        <div class="logo">
+            <a href="index.html" class="subtitle accent">Damian S.</a>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
             <ul class="nav-items">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
-            <ul class="social-media">
-                <li><a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <li><a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
-                </li>
-                <li><a href="https://www.upwork.com/o/profiles/users/your-profile" target="_blank"><i class="fab fa-telegram"></i></a>
-                </li>
-            </ul>
         </nav>
+
+
         <section class="alt-section cta-container">
             <div class="cta-content content-container">
                 <p class="content-small accent">Frontend Developer</p>
@@ -70,8 +71,6 @@
             <a href="#"><i class="fab fa-bootstrap"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-opencart"></i></a>
-
-            <!-- Add more icons for other tools -->
         </div>
     </section>
 
@@ -84,9 +83,9 @@
             <p class="content">I thrive on the challenges of creating elegant and efficient solutions to complex problems. Whether it's <span class="accent">crafting beautiful user interfaces, optimizing code performance, or diving into the latest web development trends</span>, I'm always eager to learn and push the boundaries of what's possible.</p>
             <p class="content">When I'm not glued to my computer screen, you can find me exploring the great outdoors, capturing moments through photography, or sipping on a cup of artisan coffee at a cozy cafe. I believe that a well-balanced life fuels creativity and innovation, and I'm constantly seeking inspiration from the world around me.</p>
 
-            <button class="button-secondary">Download my CV!</button>
-
-
+            <a href="assets/CV-Szolosi-Damian.pdf" download="DamianS_CV.pdf">
+                <button class="button-secondary">Download my CV!</button>
+            </a>
         </div>
 
     </section>
@@ -96,7 +95,7 @@
             <h2 class="subtitle">Projects</h2>
             <p class="content">Welcome to my projects showcase, where I bring my passion for web development to life. Here, you'll find a curated collection of my work, each project reflecting a unique journey of creativity and problem-solving. From crafting stunning e-commerce websites to building interactive web applications, I've poured my heart and skills into these creations. Explore my projects below, and witness the diversity of my work, each piece representing a step in my ongoing journey as a frontend web developer.</p>
         </div>
-        <!-- Project cards go here -->
+
         <div class="project-card-container">
         <!-- Project Card 1 -->
             <div class="project-card">
@@ -128,9 +127,6 @@
                 
             </div>
         </div>
-
-    <!-- Add more project cards as needed -->
-
     </section>
 
     <section class="section testimonials-container">
@@ -173,7 +169,7 @@
                 <p>"Sed consequat, dolor nec commodo mattis, dui ligula venenatis nulla, ac placerat lectus ipsum a purus."</p>
             </div>
 
-            <!-- Testimonial Card 2 -->
+            <!-- Testimonial Card 3 -->
 
             <div class="testimonial-card">
                 <div class="card-footer">
@@ -184,9 +180,6 @@
                 <p>"Sed consequat, dolor nec commodo mattis, dui ligula venenatis nulla, ac placerat lectus ipsum a purus."</p>
             </div>
         </div>
-    
-        <!-- Add more testimonial cards as needed -->
-        
     
     </section>
 
@@ -218,7 +211,7 @@
                 <div id="success-message"></div>
 
                 <div class="contact-information">
-                    <h3 class="subtitle">You can also fnid me on:</h3>
+                    <h3 class="subtitle">You can also find me on:</h3>
                         <div class="split">
                             <p class="content"><i class="fab fa-linkedin"></i>LinkedIn:<a href="#">Szolosi Damian</a></p>
                             <p class="content"><i class="fab fa-telegram"></i>Telegram:<a href="#">Albert Szo</a></p>

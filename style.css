@@ -9,6 +9,7 @@
 */
 * {
   margin: 0;
+  text-decoration: none;
 }
 /*
   3. Allow percentage-based heights in the application
@@ -60,7 +61,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   --accent-color: #EBB028; /* main accent color */
   --primary-color: #4B6398; /* primary color */
-  --secondary-color: #6B6048; /* text color */
+  --secondary-color: #6B6048; /* secondary color */
   --white-color: #F5F7F8; /* color for white */
   --text-color: #000; /* color for text */
   
@@ -90,7 +91,7 @@ a {
   text-decoration: none;
 }
 
-  a:hover {
+a:hover {
   color: var(--secondary-color);
 }
 
@@ -111,7 +112,6 @@ a {
   font-weight: var(--font-weight-regular);
   font-size: .9em;
   margin-bottom: 2rem;
-
 }
 
 .content-small{
@@ -156,121 +156,159 @@ a {
 }
 
 .button-secondary:hover{
-background-color: var(--secondary-color);
-color: var(--white-color);
+  background-color: var(--secondary-color);
+  color: var(--white-color);
 }
 
-
 .alt-section{
-width: 100%;
-
+  width: 100%;
 }
 
 .section{
-/* background-color: var(--primary-color); */
-margin: 0 auto;
-color: var(--white-color);
+  margin: 0 auto;
+  color: var(--white-color);
 }
 
 .alt-section, .section{
-padding: 6rem;
-display: flex;
+  padding: 6rem;
+  display: flex;
 }
 
 .content-container{
-align-self: center;
-width: 50%;
+  align-self: center;
+  width: 50%;
 }
 
 .content-container-large{
-align-self: center;
-width: 100%;
+  align-self: center;
+  width: 100%;
 }
 
 
 /* Header */
 
 /* Navi */
-.nav-container{
-display: flex;
-justify-content: space-between;
-gap: 2em;
-width: 100%;
-height: 4em;
-padding: 0 6rem;
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-white-space: nowrap;
+
+nav{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: var(--white-color);
+  padding: 1rem 6rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo{
-align-self: center;
+  color: var(--accent-color);
 }
 
-.nav-items, .social-media{
-display: flex;
-list-style: none;
-gap: 1rem;
-align-items: center;
-font-size: 1.2em;
+nav ul{
+  float: right;
+  margin-right: 20px;
 }
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+
+nav ul li a{
+  color: var(--text-color);
+  font-size: var(--font-weight-regular);
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  transition: .5s;
+} 
+
+.checkbtn{
+  font-size: 30px;
+  color: var(--text-color);
+  float: right;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+
+
 
 /* CTA */
 
 .cta-container{
-display: flex;
-gap: 3em;
+  margin-top: 80px;
+  display: flex;
+  gap: 3em;
 }
 
 
 .hero-img{
-height: 100%;
-width: 30%;
-margin: 0 auto;
-align-self: center;
+  height: 100%;
+  width: 30%;
+  margin: 0 auto;
+  align-self: center;
 }
 
 /* Tools */
 #tools {
-background-color: var(--primary-color); /* Set background color for the tools section */
-padding: 1rem 0; /* Add some padding as needed */
-text-align: center; /* Center the icons */
+  background-color: var(--primary-color); 
+  padding: 1rem 0; 
+  text-align: center; 
 }
 
 .tools-line {
-display: flex;
-justify-content: space-around;
-align-items: center;
-max-width: 90%;
-margin: 0 auto;
-font-size: 24px; /* Adjust icon size as needed */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 24px; 
 }
 
 .tools-line a {
-color: var(--white-color); /* Icon color */
-text-decoration: none; /* Remove underline from the links */
-margin: 0 20px; /* Add spacing between the icons */
-transition: color 0.3s ease; /* Add a color transition on hover */
+  color: var(--white-color); 
+  text-decoration: none;
+  margin: 0 20px;
+  transition: color 0.3s ease; 
 }
 
 .tools-line a:hover {
-color: var(--accent-color); /* Change the color on hover */
+  color: var(--accent-color); 
 }
 
 
 /* About */
 
 .about-container{
-gap: 2em;
+  gap: 2em;
 }
 .about-container img{
-margin: 0;
+  margin: 0;
 }
 
 .about-content{
-background-color: var(--primary-color);
-padding: 2rem 6rem;
-width: 100%;
+  background-color: var(--primary-color);
+  padding: 2rem 6rem;
+  width: 100%;
 }
 
 
@@ -278,47 +316,47 @@ width: 100%;
 /* Projects */
 
 .projects-container{
-display: flex;
-flex-direction: column;
-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .projects-container .content-container{
-width: 100%;
+  width: 100%;
 }
 
 .project-card-container{
-display: flex;
+  display: flex;
 }
 .project-card {
-background-color: var(--primary-color);
-color: var(--white-color);
-border-radius: 5px;
-padding: 1rem;
-margin: 1rem;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-text-align: center;
-transition: transform 0.2s ease;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
 
 /* Ensure the cards are responsive and stack on smaller screens */
-flex: 0 1 calc(33.33% - 2rem);
-max-width: calc(33.33% - 2rem);
+  flex: 0 1 calc(33.33% - 2rem);
+  max-width: calc(33.33% - 2rem);
 }
 
 .project-card img {
-width: 100%;
-max-height: 200px;
-object-fit: cover;
-border-radius: 5px;
-margin-bottom: 1rem;
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .project-card:hover {
-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .project-card button{
-margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 
@@ -327,59 +365,58 @@ margin-top: 2rem;
 /* Testimonials */
 
 .testimonials-container {
-background-color: var(--primary-color);
-color: var(--white-color);
-display: flex;
-gap: 2rem;
-justify-content: space-between;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 
 .testimonials-container .content-container{
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-self: flex-start;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
 }
 
 
 
 .testimonial-cards-container{
-display: flex;
-flex-direction: column;
-gap: 1rem;
-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
 }
 .testimonial-card {
-background-color: var(--white-color);
-color: var(--text-color);
-border-radius: 5px;
-padding: 1rem;
-margin: 1rem 1rem;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-text-align: center;
-transition: transform 0.2s ease;
-
+  background-color: var(--white-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
 .testimonial-card img {
-width: 80px; /* Adjust the size of the profile picture as needed */
-height: 80px; /* Adjust the size of the profile picture as needed */
-border-radius: 50%;
-margin-bottom: 1rem;
-justify-content: center;
+  width: 80px;
+  height: 80px; 
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  justify-content: center;
 }
 
 .testimonials-container .card-footer{
-display: flex;
-flex-direction: row;
-gap: 1rem;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .testimonial-card:hover {
-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 
@@ -426,9 +463,7 @@ transform: translateY(-5px);
 .contact-container {
   width: 60%;
   padding: 20px;
-  /* text-align: center;
-  justify-content: center; */
-  background-color: var(--white-color); /* Use the provided white color */
+  background-color: var(--white-color); 
 }
 
 
@@ -439,7 +474,7 @@ transform: translateY(-5px);
 .contact-container label {
   display: block;
   margin-bottom: 5px;
-  color: var(--text-color); /* Use the provided text color */
+  color: var(--text-color);
 }
 
 .contact-container input,
@@ -447,7 +482,7 @@ transform: translateY(-5px);
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid var(--text-color); /* Use the provided text color */
+  border: 1px solid var(--text-color); 
   border-radius: 5px;
 }
 
@@ -521,9 +556,7 @@ color: var(--accent-color);
 
 
 
-
-
-
+/* Sandbox */
 
 
 
@@ -536,8 +569,6 @@ color: var(--accent-color);
 /* Media queries */
 /* Small screens (e.g., smartphones) */
 @media screen and (max-width: 768px) {
-/* Add styles for small screens here */
-
 
 body{
   font-size: 14px;
@@ -551,7 +582,6 @@ body{
 }
 
 .section{
-  /* background-color: var(--primary-color); */
   margin: 0 auto;
   width: 100%;
   color: var(--white-color);
@@ -572,31 +602,51 @@ body{
 }
 
 /* Navi */
-.nav-container{
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-  height: auto;
-  padding: 0;
+
+.checkbtn{
+  display: block;
+
+}
+
+nav{
+  padding: 1rem 2rem;
+  opacity: 0.95;
+}
+
+nav ul{
+  position: fixed;
   width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.95;
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all 0.5s;
 }
 
-.logo{
-  align-self: left;
-  font-size: small;
+nav ul li{
+  display: block;
+  margin: 50px 0;
+  line-height: 30px;
+}
+nav ul li a{
+  font-size: 2rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--white-color);
 }
 
-.nav-items, .social-media{
-  padding: 0;
-  gap: .5rem;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
+nav ul li a.active,
+nav ul li a:hover{
+  background: none;
+  color: var(--accent-color);
 }
 
-.social-media{
-  font-size: 1.5em;
+#check:checked ~ ul{
+  left: 0;
 }
+
+
 
 /* CTA */
 
@@ -609,6 +659,9 @@ body{
   margin-bottom: 2rem;
 }
 
+.tools-line a{
+  margin: 0;
+}
 
 
 /* About */
@@ -694,7 +747,6 @@ width: 100%;
 
 /* Medium screens (e.g., tablets) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-/* Add styles for medium screens here */
 
 .alt-section{
   width: 100%;
@@ -702,7 +754,6 @@ width: 100%;
 }
 
 .section{
-  /* background-color: var(--primary-color); */
   margin: 0 auto;
   color: var(--white-color);
 }
@@ -718,25 +769,16 @@ width: 100%;
 }
 
 /* Nav */
-.nav-container{
-  display: flex;
-  gap: .8rem;
-  height: auto;
-  padding: 0;
-  width: 100%;
+nav{
+  padding: 1rem 3rem;
 }
 
-
-.nav-items, .social-media{
-  padding: 0;
-  gap: .5rem;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
+label.logo{
+  font-size: 30px;
+  padding-left: 50px;
 }
-
-.social-media{
-  font-size: 1.5em;
+nav ul li a{
+  font-size: 16px;
 }
 
 
@@ -761,9 +803,24 @@ width: 100%;
   margin-bottom: 2rem;
 }
 
+::-webkit-scrollbar {
+  width: 10px; 
+  position: fixed; 
+  z-index: 9999; 
+  right: 0; 
+}
+
+/* Scrollbar Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  
+}
+
 }
 
 /* Large screens (e.g., desktops) */
 @media screen and (min-width: 1025px) {
+  
+  
 /* Add styles for large screens here */
 }
