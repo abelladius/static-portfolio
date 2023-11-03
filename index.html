@@ -51,8 +51,8 @@
                 <h1 class="title">Szolosi Damian</h1>
                 <p class="content-large">My portfolio is a humble showcase of my work, a testament to my ongoing journey of growth and learning. It's a place where I experiment, make mistakes, and evolve. I invite you to explore my creations and see the world through my digital lens. You won't find sales pitches here, only a genuine reflection of my love for web development and the endless possibilities it offers.</p>
 
-                <button class="button">See my work!</button>
-                <button class="button-secondary">Contact me!</button>
+                <a href="#projects"><button class="button">See my work!</button></a>
+                <a href="#contact"><button class="button-secondary">Contact me!</button></a>
             </div>
             <img src="images/skills-img.png" alt="" class="hero-img">
 
@@ -79,6 +79,7 @@
 
         <div class="about-content content-container">
             <h2 class="subtitle">About Me</h2>
+            <hr>
             <p class="content">Hello there! I'm a passionate <span class="accent">web developer</span> who's on a journey to turn ideas into interactive digital experiences. My love for coding began at a young age, and I've been fascinated by the ever-evolving world of web technologies ever since.</p>
             <p class="content">I thrive on the challenges of creating elegant and efficient solutions to complex problems. Whether it's <span class="accent">crafting beautiful user interfaces, optimizing code performance, or diving into the latest web development trends</span>, I'm always eager to learn and push the boundaries of what's possible.</p>
             <p class="content">When I'm not glued to my computer screen, you can find me exploring the great outdoors, capturing moments through photography, or sipping on a cup of artisan coffee at a cozy cafe. I believe that a well-balanced life fuels creativity and innovation, and I'm constantly seeking inspiration from the world around me.</p>
@@ -93,27 +94,46 @@
     <section class="alt-section projects-container" id="projects">
         <div class="content-container-large">
             <h2 class="subtitle">Projects</h2>
+            <hr>
             <p class="content">Welcome to my projects showcase, where I bring my passion for web development to life. Here, you'll find a curated collection of my work, each project reflecting a unique journey of creativity and problem-solving. From crafting stunning e-commerce websites to building interactive web applications, I've poured my heart and skills into these creations. Explore my projects below, and witness the diversity of my work, each piece representing a step in my ongoing journey as a frontend web developer.</p>
         </div>
 
         <div class="project-card-container">
         <!-- Project Card 1 -->
             <div class="project-card">
-                <img src="images/project-1.png" alt="Project 1">
-                <h3>AlpinMag Ecommerce</h3>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo eget nunc tincidunt fringilla.</p>
-                <p>Skills Used: <span class="accent">React, Redux, Node.js</span></p>
-                <button class="button-secondary">Live Preview</button>
+                <img src="images/project-2.png" alt="Project 2">
+                <h3>KYD Animal Shelter</h3>
+                <div class="description-wrapper">
+                    <p class="project-description">
+                        Skills Used: <span class="accent">HTML, CSS, JavaScript</span>
+                    </p>
+                    
+                    <p class="hidden-text">
+                        "I designed and developed a simple and user-friendly website for KYD Animal Shelter. The website allows for easy online donations to support stray animals. It was a fulfilling project, knowing that the website helps make a positive impact on the lives of these animals."
+                    </p>
+                </div>
 
+                <a href="https://abelladius.github.io/KYDAnimalShelter/"><button class="button-secondary">Live Preview</button></a>
+                <button class="button-primary show-more-button">Show More</button>
             </div>
 
             <!-- Project Card 2 -->
+            
             <div class="project-card">
-                <img src="images/project-2.png" alt="Project 2">
-                <h3>KYD Animal Shelter</h3>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo eget nunc tincidunt fringilla.</p>
-                <p>Skills Used: <span class="accent">React, Redux, Node.js</span></p>
-                <button class="button-secondary">Live Preview</button>
+                <img src="images/project-1.png" alt="Project 1">
+                <h3>AlpinMag Ecommerce</h3>
+                <div class="description-wrapper">
+                    <p class="project-description">
+                        Skills Used: <span class="accent">HTML, CSS, PHP, CMS(OpenCart)</span>
+                    </p>
+                    
+                    <p class="hidden-text">
+                        "Alpinmag is an e-commerce website that I've helped reach their goals by assisting with their OpenCart e-commerce website. I installed essential plugins, created eye-catching banners for the website, provided support with bug fixes, and optimized their SEO. It was a great experience working with Alpinmag."
+                    </p>
+                </div>
+
+                <a href="https://alpinmag.ro"><button class="button-secondary">Live Preview</button></a>
+                <button class="show-more-button">Show More</button>
 
             </div>
 
@@ -121,11 +141,26 @@
             <div class="project-card">
                 <img src="images/project-3.png" alt="Project 3">
                 <h3>Scarpa Ecommerce</h3>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo eget nunc tincidunt fringilla.</p>
-                <p>Skills Used: <span class="accent">React, Redux, Node.js</span></p>
-                <button class="button-secondary">Live Preview</button>
-                
+                <div class="description-wrapper">
+                    <p class="project-description">
+                        Skills Used: <span class="accent">HTML, CSS, PHP, CMS(WordPress/WooComerce)</span>
+                    </p>
+                    
+                    <p class="hidden-text">
+                        "Scarpa is an e-commerce website that I've helped achieve its objectives by providing assistance with their WordPress-based online store. I worked on the customization of their website, installed essential plugins, designed appealing banners, offered solutions for bug fixes, and optimized their SEO. Collaborating with Scarpa was a rewarding experience."
+                    </p>
+                </div>
+                <a href="https://scarpa.ro"><button class="button-secondary">Live Preview</button></a>
+                <button class="show-more-button">Show More</button>
             </div>
+            
+            <!-- <div class="project-card">
+                <img src="images/project-3.png" alt="Project 3">
+                <h3>Scarpa Ecommerce</h3>
+                <p>"For KYD Animal Shelter, I had the opportunity to work on their WordPress website. By enhancing their online presence and user experience, we furthered their mission to support stray animals. It's always rewarding to be part of such meaningful projects."</p>
+                <p>Skills Used: <span class="accent">HTML, CSS, PHP, CMS(WordPress/WooComerce)</span></p>
+                <a href="https://scarpa.ro"><button class="button-secondary">Live Preview</button></a>
+            </div> -->
         </div>
     </section>
 
@@ -134,6 +169,11 @@
             <div id="testimonial-content-container-text">
                 <h2 class="subtitle">What my clients say about me:</h2>
                 <p class="content">Discover the experiences and feedback of those who have journeyed with me. These testimonials are a testament to the collaborations, the impact, and the relationships forged through web development. </p>
+            </div>
+
+            <div class="testimonial-icons">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
             </div>
 
             <div class="testimonial-form">
@@ -146,6 +186,11 @@
                 </form>
             </div>
 
+            <div class="testimonial-icons">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+
         </div>
 
         <!-- Testimonial Card 1 -->
@@ -156,7 +201,8 @@
                     <h3 class="accent">Bela Sebastian</h3>
                     <p class="content">-Alpinmag</p>
                 </div>
-                <p>"Sed consequat, dolor nec commodo mattis, dui ligula venenatis nulla, ac placerat lectus ipsum a purus."</p>
+                <p>"Damian is a highly skilled and dedicated web developer. He played a pivotal role in our e-commerce success. His expertise in OpenCart, plugin installations, banner designs, bug fixing, and SEO optimization significantly contributed to our online growth. We couldn't have achieved our goals without him."</p>
+
             </div>
         
             <!-- Testimonial Card 2 -->
@@ -166,31 +212,43 @@
                     <h3 class="accent">Jonatan K.</h3>
                     <p class="content">-KYD Animal Shelter</p>
                 </div>
-                <p>"Sed consequat, dolor nec commodo mattis, dui ligula venenatis nulla, ac placerat lectus ipsum a purus."</p>
-            </div>
-
-            <!-- Testimonial Card 3 -->
-
-            <div class="testimonial-card">
-                <div class="card-footer">
-                    <img src="images/profile-picture.png" alt="User 2">
-                    <h3 class="accent">Jonatan K.</h3>
-                    <p class="content">-KYD Animal Shelter</p>
-                </div>
-                <p>"Sed consequat, dolor nec commodo mattis, dui ligula venenatis nulla, ac placerat lectus ipsum a purus."</p>
+                <p>"Damian's commitment to our cause was truly exceptional. He designed and developed a website that allowed us to receive online donations effortlessly. His work was instrumental in furthering our mission to support stray animals. We're incredibly grateful for his contribution."</p>
             </div>
         </div>
     
     </section>
 
-    <section class="section skills-container" id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <!-- Add more skills -->
-        </ul>
+    <section class="alt-section skills" id="skills">
+        <div class="skills-container">
+            <div class="hard-skills skills-list">
+                <h3 class="subtitle">Hard</h3>
+                <hr>
+                <ul>
+                    <li class="content"><i class="fas fa-check-circle  accent"></i> HTML5</li>
+                    <li class="content"><i class="fas fa-check-circle  accent"></i> CSS3</li>
+                    <li class="content"><i class="fas fa-check-circle  accent"></i> JavaScript</li>
+                    <li class="content"><i class="fas fa-check-circle  accent"></i> React</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> WordPress</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> WordPress Customization</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> E-commerce Enhancement</li>
+                </ul>
+            </div>
+    
+            <h2 class="subtitle">Skills</h2>
+
+            <div class="soft-skills skills-list">
+                <h3 class="subtitle">Soft</h3>
+                <hr>
+                <ul>
+                    <li class="content"><i class="fas fa-check-circle"></i> Problem Solving</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> Creativity</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> Attention to Detail</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> Teamwork</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> Communication</li>
+                    <li class="content"><i class="fas fa-check-circle"></i> Time Management</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="alt-section contact" id="contact">
@@ -213,15 +271,14 @@
                 <div class="contact-information">
                     <h3 class="subtitle">You can also find me on:</h3>
                         <div class="split">
-                            <p class="content"><i class="fab fa-linkedin"></i>LinkedIn:<a href="#">Szolosi Damian</a></p>
-                            <p class="content"><i class="fab fa-telegram"></i>Telegram:<a href="#">Albert Szo</a></p>
+                            <p class="content"><i class="fab fa-linkedin"></i>LinkedIn:<a href="https://www.linkedin.com/in/damian-szolosi-5a600722a/">Szolosi Damian</a></p>
+                            <p class="content"><i class="fab fa-telegram"></i>Telegram:<a href="https://web.telegram.org/a/#5733666870">Damian Szolosi</a></p>
                             <p class="content"><i class="fa fa-phone social-icons"></i>Phone Number: (+40)772205210</p>
                         </div>
                 </div>
             </div>
             <div class="contact-information-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.6130751530327!2d72.67506620000002!3d28.790798799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393e8991c6fa6eb1%3A0xe8e5990ed789c691!2sGopal%20Krishan%20Gausala%201PHM!5e0!3m2!1sro!2sro!4v1697117281896!5m2!1sro!2sro"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89103.94652632409!2d21.134188760591517!3d45.7411547411146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4745677dcb0fb5a7%3A0x537faf6473936749!2sTimi%C8%99oara!5e0!3m2!1sro!2sro!4v1698873467951!5m2!1sro!2sro"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
         </section>
@@ -229,13 +286,13 @@
    <footer class="footer">
     <div class="footer-content">
         <div class="footer-social">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <a href="https://www.linkedin.com/in/damian-szolosi-5a600722a/" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://t.me/your-username" target="_blank">
+            <a href="https://web.telegram.org/a/#5733666870" target="_blank">
                 <i class="fab fa-telegram"></i>
             </a>
-            <a href="https://github.com/your-username" target="_blank">
+            <a href="https://github.com/abelladius" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </div>
@@ -245,6 +302,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

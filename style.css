@@ -131,8 +131,16 @@ a:hover {
   color: var(--accent-color);
 }
 
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--accent-color);
+  width: 100%;
+  margin: 1rem 0;
+}
+
 .button {
-  border: 3px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   color: var(--primary-color);
   padding: 10px 20px;
   border-radius: 5px;
@@ -329,6 +337,8 @@ nav ul li a:hover{
   display: flex;
 }
 .project-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-color);
   color: var(--white-color);
   border-radius: 5px;
@@ -337,11 +347,20 @@ nav ul li a:hover{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: transform 0.2s ease;
-
-/* Ensure the cards are responsive and stack on smaller screens */
   flex: 0 1 calc(33.33% - 2rem);
   max-width: calc(33.33% - 2rem);
 }
+
+.project-card .description-wrapper {
+  max-height: 80px; 
+  overflow: hidden;
+  transition: max-height 0.5s ease; 
+}
+
+.project-card .hidden-text {
+  display: none;
+}
+/*  */
 
 .project-card img {
   width: 100%;
@@ -386,8 +405,11 @@ nav ul li a:hover{
 .testimonial-cards-container{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 2rem;
   width: 60%;
+  height: 100%;
+  margin: 0;
 }
 .testimonial-card {
   background-color: var(--white-color);
@@ -429,7 +451,8 @@ nav ul li a:hover{
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
-    align-content: b
+    margin: .5rem auto;
+    
 }
 
 .testimonial-form input,
@@ -437,17 +460,69 @@ nav ul li a:hover{
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color);
     border-radius: 5px;
     outline: none;
 }
 
-/* Skills */
-.skills-container{
-  background:url(images/background-skills.svg);
-  opacity: .2;
+.testimonial-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--accent-color);
 }
 
+.testimonial-icons i {
+  font-size: 2em;
+  margin: 0 5px;
+}
+
+/* Skills */
+.skills{
+  background:url(images/background-skills.svg);
+  color: var(--text-color);
+  align-items: center;
+}
+
+.skills-container{
+  background: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6rem;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.skills-container:hover{
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skills-list{
+  width: 40%;
+}
+
+.skills-list ul{
+  list-style-type: none;
+  text-align: left;
+  margin-top: 2rem;
+  z-index: 5;
+}
+
+.skills .skills-container h2.subtitle {
+  writing-mode: vertical-rl;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  font-size: 2em; 
+  top: 30%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  letter-spacing: 1.2em;
+  opacity: .7;
+}
 
 
 
@@ -575,6 +650,10 @@ body{
   padding: 0;
 }
 
+.subtitle{
+  font-size: 1.5em;
+}
+
 
 .alt-section{
   width: 100%;
@@ -605,7 +684,6 @@ body{
 
 .checkbtn{
   display: block;
-
 }
 
 nav{
@@ -687,7 +765,7 @@ nav ul li a:hover{
 
 .project-card {
     flex: 0 1 100%;
-    max-width: 60%;
+    max-width: 90%;
     margin: 2rem auto;
 }
 
@@ -712,7 +790,7 @@ nav ul li a:hover{
 
 .testimonial-card {
   flex: 0 1 100%;
-  width: 60%;
+  width: 90%;
 }
 
 .testimonial-card img{
@@ -722,6 +800,17 @@ margin: 0 auto;
 
 
 /* Skills */
+.skills-container{
+  flex-direction: row;
+  padding: .5rem;
+  gap: 2rem;
+}
+
+
+
+.skills .skills-container h2.subtitle {
+  font-size: 1em;
+}
 
 /* Contact */
 
@@ -802,6 +891,14 @@ nav ul li a{
 .about-content .button-secondary{
   margin-bottom: 2rem;
 }
+
+.skills-container{
+  flex-direction: row
+}
+
+
+
+
 
 ::-webkit-scrollbar {
   width: 10px; 

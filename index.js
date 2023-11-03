@@ -1,6 +1,6 @@
-// Smooth scrolling (not working)
+// Smooth scrolling
 
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('header a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
@@ -13,3 +13,23 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+// Show more buttons
+
+document.querySelectorAll('.show-more-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const projectCard = this.closest('.project-card');
+        const descriptionWrapper = projectCard.querySelector('.description-wrapper');
+        const hiddenText = projectCard.querySelector('.hidden-text');
+
+        if (descriptionWrapper.style.maxHeight) {
+            descriptionWrapper.style.maxHeight = null;
+            hiddenText.style.display = 'none';
+        } else {
+            descriptionWrapper.style.maxHeight = 'none';
+            hiddenText.style.display = 'block';
+        }
+    });
+});
+
+
